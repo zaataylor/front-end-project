@@ -5,9 +5,11 @@ Create an application to retrieve food truck information for the Charlotte area.
 
 ## Requirements
 ### Language
-Choose either AngularJS or ReactJS to build this project. Finish one of the below courses or any other courses you find relevant before attempting the project.
-- [AngularJS Course](https://frontendmasters.com/courses/building-apps-angular/) 
-- [ReactJS Course](https://frontendmasters.com/courses/complete-react-v4/) 
+Choose either AngularJS or ReactJS to build this project. Finish one of the below courses or any other courses you find relevant before attempting the project. As certain features will require the use of a state management library, below the course references you will find documentation for a suggested library.
+- [AngularJS Course](https://frontendmasters.com/courses/building-apps-angular/)
+  - [Redux Documentation](https://redux.js.org/basics/basic-tutorial/)
+- [ReactJS Course](https://frontendmasters.com/courses/complete-react-v4/)
+  - [NgRX Documentation](https://ngrx.io/guide/store)
 
 ### Basics 
 <i>Yelp API</i>
