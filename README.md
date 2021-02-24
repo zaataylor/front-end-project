@@ -9,6 +9,10 @@ Choose either AngularJS or ReactJS to build this project. Finish one of the belo
 - [AngularJS Course](https://frontendmasters.com/courses/building-apps-angular/)
   - [NgRX Documentation](https://ngrx.io/guide/store)
 - [ReactJS Course](https://frontendmasters.com/courses/complete-react-v4/)
+  - Functional components with React Hooks lead to simpler, cleaner code. Many projects are now utilizing this pattern instead of traditional                           React Class components, so it is very beneficial to become familiar with these.
+    - [Intro to React Hooks](https://reactjs.org/docs/hooks-intro.html)
+    - [React Hooks Cheat Sheet](https://www.freecodecamp.org/news/react-hooks-cheatsheet)
+    - [Converting class components to functional components](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-             functional-components-with-react-hooks)
   - [Redux Documentation](https://redux.js.org/basics/basic-tutorial/)
 
 ### Basics 
