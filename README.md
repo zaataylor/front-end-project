@@ -13,7 +13,7 @@ Choose either AngularJS or ReactJS to build this project. Finish one of the belo
     - [Intro to React Hooks](https://reactjs.org/docs/hooks-intro.html)
     - [React Hooks Cheat Sheet](https://www.freecodecamp.org/news/react-hooks-cheatsheet)
     - [Converting class components to functional components](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks)
-- [Redux Documentation](https://redux.js.org/basics/basic-tutorial/)
+  - [Redux Documentation](https://redux.js.org/basics/basic-tutorial/)
 
 ### Basics 
 <i>Yelp API</i>
