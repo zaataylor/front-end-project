@@ -16,6 +16,13 @@ Choose either AngularJS or ReactJS to build this project. Finish one of the belo
 - Setup a Yelp API Account
 - Fetch food truck data from Yelp API by sending “food truck” as a search parameter
 
+<i>Login and Signup</i>
+- There should be an authentication system included in the form of login or signup pages/modals that will store users credentials 
+- User will not be able to navigate to other pages until the user has been logged in
+- This can be approached in several ways. Recommended :
+  - Firebase db to store login credentials
+  - Google OAuth
+
 <i>Map Visualization</i>
 - Find a suitable map library for visualizing the locations of the food trucks on a map in the browser
 - Visualize Yelp API food trucks locations on the map with some kind of marker (dot, pin, logo)
@@ -35,6 +42,20 @@ Choose either AngularJS or ReactJS to build this project. Finish one of the belo
   - Do not store them in a database or file
 - Create a page that lists favorites
   - User can add or remove favorites from this page
+  
+<i>Mobile Responsiveness</i>
+- This application should be responsive to a number of different screen sizes
+  - Tablets: 1024x768
+  - Mobile: 360x640
 
+<i>Unit Testing</i>
+- There should be an appropriate amount of unit testing to ensure that all aspects of the application are working properly and to discover and address any potentially problematic edge cases.
+  - Recommended Frameworks for React: Jest, Mocha
+  - Recommended Frameworks for Angular: Jasmine
+  
+<i>Documentation</i>
+- Documentation should be included
+  - Providing an explanation of the uses of the application
+  - Detailing how to start up and navigate the application
 ## Things We Do Not Expect
 - We do not expect this application to be well-designed
