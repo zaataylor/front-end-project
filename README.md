@@ -6,9 +6,9 @@ Create an application to retrieve food truck information for the Charlotte area.
 ## Requirements
 ### Language
 Choose either AngularJS or ReactJS to build this project. Finish one of the below courses or any other courses you find relevant before attempting the project. As certain features will require the use of a state management library, below the course references you will find documentation for a suggested library.
-- [AngularJS Course](https://frontendmasters.com/courses/building-apps-angular/)
-  - [NgRX Documentation](https://ngrx.io/guide/store)
-- [ReactJS Course](https://frontendmasters.com/courses/complete-react-v4/)
+- [AngularJS Course](https://frontendmasters.com/courses/angular-9/)
+  - [NgRX Documentation](https://ngrx.io/docs)
+- [ReactJS Course](https://frontendmasters.com/courses/complete-react-v5/)
   - Functional components with React Hooks lead to simpler, cleaner code. Many projects are now utilizing this pattern instead of traditional                           React Class components, so it is very beneficial to become familiar with these.
     - [Intro to React Hooks](https://reactjs.org/docs/hooks-intro.html)
     - [React Hooks Cheat Sheet](https://www.freecodecamp.org/news/react-hooks-cheatsheet)
@@ -62,4 +62,4 @@ Choose either AngularJS or ReactJS to build this project. Finish one of the belo
   - Providing an explanation of the uses of the application
   - Detailing how to start up and navigate the application
 ## Things We Do Not Expect
-- We do not expect this application to be well-designed
+- We do not expect this application to be visually well-designed, though it should be functional. 
