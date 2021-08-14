@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+#foodTruckModal.modal {
+	position: inherit;
+	top: 0;
+	left: 0;
+	z-index: 1060;
+	height: 60%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	outline: 0;
+}
+
+/* https://stackoverflow.com/questions/25874001/how-to-put-scroll-bar-only-for-modal-body/56229656 */
+/* This makes the entire modal show */
+#foodTruckModal.modal-dialog {
+	overflow-y: initial;
+}
+/* This makes the content in the modal body scrollable
+if that's needed */
+#foodTruckModal.modal-body {
+	height: 35vh;
+	overflow-y: auto;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-none {
+	display: none;
+}
+
+#mapid {
+	height: 87vh;
+}
+
+input[id^="searchOrFilterForm"] {
+	display: inline;
+	width: auto;
+}
+
+#placeName {
+	margin-right: auto;
+}
+
+.flex-child {
+	display: inline;
+}
+
+.flex-child:first-child {
+	margin-right: 1vh;
+}
+
+label.filter-radio {
+	font-size: 0.75rem;
+}
+
+label.filter-checkbox {
+	font-size: 0.75rem;
+}
+
+.check-and-radio-inputs {
+	margin-right: 3px;
+	margin-left: 5px;
+}
+
+legend {
+	margin-bottom: 0rem;
+}
