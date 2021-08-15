@@ -32,11 +32,9 @@ function LoginForm(props) {
 		auth
 			.login(values.username, values.password)
 			.then(() => {
-				console.log("Login Successful");
 				window.location = "/";
 			})
 			.catch((err) => {
-				console.log("Failed to login the user! Eek! Error was: ", err);
 				toast.error(`${err.response.data.error}`);
 			});
 	};

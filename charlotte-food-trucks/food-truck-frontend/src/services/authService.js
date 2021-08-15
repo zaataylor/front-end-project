@@ -1,7 +1,7 @@
 import http from "./httpService";
-import dotenv from "dotenv";
 import { apiUrl } from "../config.json";
 import { verify } from "jsonwebtoken";
+import dotenv from "dotenv";
 dotenv.config();
 const tokenKey = "token";
 
@@ -16,7 +16,6 @@ export async function login(username, password) {
 		localStorage.setItem(tokenKey, token);
 		return Promise.resolve();
 	} catch (err) {
-		console.log("Exception was: ", err);
 		return Promise.reject(err);
 	}
 }
@@ -33,13 +32,11 @@ export async function signup(username, password) {
 		Promise.resolve();
 	} catch (ex) {
 		Promise.reject(ex);
-		console.log("Error: ", ex);
 	}
 }
 
 export function logout() {
 	localStorage.removeItem(tokenKey);
-	console.log("Token removed!");
 }
 
 export function getJwt() {
@@ -48,7 +45,6 @@ export function getJwt() {
 
 export function getCurrentUser() {
 	const token = getJwt();
-	console.log("trying to get the current user with token=", token);
 	if (token) {
 		return verify(token, process.env.REACT_APP_TOKEN_SECRET).user;
 	} else {

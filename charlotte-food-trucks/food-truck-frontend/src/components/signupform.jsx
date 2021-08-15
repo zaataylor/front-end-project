@@ -36,11 +36,9 @@ function SignupForm(props) {
 		auth
 			.signup(values.username, values.password)
 			.then(() => {
-				console.log("Sign-up Successful");
 				window.location = "/";
 			})
 			.catch((err) => {
-				console.log("Failed to signup! Eek!");
 				toast.error(`${err.response.data.error}`);
 			});
 	};
