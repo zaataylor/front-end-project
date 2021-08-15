@@ -1,0 +1,17 @@
+{
+	"defaultCenterPosition": [
+		35.2271,
+		-80.8429
+	],
+	"businessCategory": "foodtrucks",
+	"apiUrl": "https://api.yelp.com/v3/businesses",
+	"firebaseConfig": {
+		"apiKey": "AIzaSyCz3ATCoQTA7DTkLmrpfMzdjtLyDJTZr54",
+		"authDomain": "clt-food-trucks.firebaseapp.com",
+		"projectId": "clt-food-trucks",
+		"storageBucket": "clt-food-trucks.appspot.com",
+		"messagingSenderId": "424999533829",
+		"appId": "1:424999533829:web:be3e9bbcf926a6a84a0b6c",
+		"databaseURL": "https://clt-food-trucks-default-rtdb.firebaseio.com/"
+	}
+}

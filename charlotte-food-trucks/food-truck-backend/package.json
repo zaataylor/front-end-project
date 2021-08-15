@@ -1,0 +1,22 @@
+{
+  "name": "food-truck-backend",
+  "version": "1.0.0",
+  "description": "Backend for Charlotte Food Trucks app",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "Zachary Taylor",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase": "^8.7.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
