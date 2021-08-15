@@ -13,7 +13,11 @@ axios.interceptors.response.use(null, (error) => {
 
 	// Things outside of normal errors are different
 	if (!normalError) {
-		toast.error("Unexpected error encountered");
+		error.response = {
+			data: {
+				error: "Unexpected error occurred!",
+			},
+		};
 	}
 	return Promise.reject(error);
 });

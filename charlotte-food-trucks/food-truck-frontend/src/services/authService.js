@@ -8,15 +8,16 @@ const tokenKey = "token";
 export async function login(username, password) {
 	const loginEndpoint = apiUrl + "/loginUser";
 	try {
-		const { token } = http.post(loginEndpoint, {
+		const response = await http.post(loginEndpoint, {
 			username: username,
 			password: password,
 		});
-		console.log(`Token after login is: ${token}`);
+		const { token } = response.data;
 		localStorage.setItem(tokenKey, token);
-		console.log(`Token set for ${username} with password ${password}!`);
-	} catch (ex) {
-		console.log(ex);
+		return Promise.resolve();
+	} catch (err) {
+		console.log("Exception was: ", err);
+		return Promise.reject(err);
 	}
 }
 
@@ -27,9 +28,11 @@ export async function signup(username, password) {
 			username: username,
 			password: password,
 		});
-		console.log(`Response was: ${response}`);
-		localStorage.setItem(tokenKey, "eh");
+		const { token } = response.data;
+		localStorage.setItem(tokenKey, token);
+		Promise.resolve();
 	} catch (ex) {
+		Promise.reject(ex);
 		console.log("Error: ", ex);
 	}
 }
@@ -46,7 +49,11 @@ export function getJwt() {
 export function getCurrentUser() {
 	const token = getJwt();
 	console.log("trying to get the current user with token=", token);
-	return token ? verify(token, process.env.REACT_APP_TOKEN_SECRET).user : null;
+	if (token) {
+		return verify(token, process.env.REACT_APP_TOKEN_SECRET).user;
+	} else {
+		return null;
+	}
 }
 
 const auth = {

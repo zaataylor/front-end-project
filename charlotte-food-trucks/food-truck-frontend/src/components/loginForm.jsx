@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Joi from "joi-browser";
 import auth from "../services/authService";
+import { toast, ToastContainer } from "react-toastify";
 
 function LoginForm(props) {
 	// schema for username and password
@@ -28,9 +29,16 @@ function LoginForm(props) {
 	};
 
 	const doSubmit = () => {
-		auth.login(values.username, values.password);
-		console.log("Login Successful");
-		window.location = "/";
+		auth
+			.login(values.username, values.password)
+			.then(() => {
+				console.log("Login Successful");
+				window.location = "/";
+			})
+			.catch((err) => {
+				console.log("Failed to login the user! Eek! Error was: ", err);
+				toast.error(`${err.response.data.error}`);
+			});
 	};
 
 	// Validation of the current data in the form; this can happen
@@ -76,35 +84,38 @@ function LoginForm(props) {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className="form-group">
-			<label htmlFor="username">Username</label>
-			<input
-				className="form-control my-2"
-				type="text"
-				name="username"
-				onChange={handleChange}
-				value={values.username}
-				error={errors["username"]}
-			></input>
-			{errors["username"] && (
-				<div className="alert alert-danger">{errors["username"]}</div>
-			)}
-			<label htmlFor="password">Password</label>
-			<input
-				className="form-control my-2"
-				type="password"
-				name="password"
-				onChange={handleChange}
-				value={values.password}
-				error={errors["password"]}
-			></input>
-			{errors["password"] && (
-				<div className="alert alert-danger">{errors["password"]}</div>
-			)}
-			<button className="btn btn-primary" type="submit" disabled={validate()}>
-				Login
-			</button>
-		</form>
+		<React.Fragment>
+			<ToastContainer />
+			<form onSubmit={handleSubmit} className="form-group">
+				<label htmlFor="username">Username</label>
+				<input
+					className="form-control my-2"
+					type="text"
+					name="username"
+					onChange={handleChange}
+					value={values.username}
+					error={errors["username"]}
+				></input>
+				{errors["username"] && (
+					<div className="alert alert-danger">{errors["username"]}</div>
+				)}
+				<label htmlFor="password">Password</label>
+				<input
+					className="form-control my-2"
+					type="password"
+					name="password"
+					onChange={handleChange}
+					value={values.password}
+					error={errors["password"]}
+				></input>
+				{errors["password"] && (
+					<div className="alert alert-danger">{errors["password"]}</div>
+				)}
+				<button className="btn btn-primary" type="submit" disabled={validate()}>
+					Login
+				</button>
+			</form>
+		</React.Fragment>
 	);
 }
 

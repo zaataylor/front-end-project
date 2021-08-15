@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import ProtectedRoute from "./components/common/ProtectedRoute";
+import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/navbar";
 import NotFound from "./components/notFound";
 import Logout from "./components/logout";
