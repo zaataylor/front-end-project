@@ -1,5 +1,4 @@
 import axios from "axios";
-import { toast } from "react-toastify";
 
 // Interceptor that handles errors before being handled
 // by subsequent promises
