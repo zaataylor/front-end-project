@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Joi from "joi-browser";
 import auth from "../services/authService";
 import { toast, ToastContainer } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function LoginForm(props) {
 	// schema for username and password
@@ -113,6 +114,9 @@ function LoginForm(props) {
 					Login
 				</button>
 			</form>
+			<div>
+				Don't have an account yet? Sign up <Link to="/signup">here!</Link>
+			</div>
 		</React.Fragment>
 	);
 }
