@@ -115,7 +115,7 @@ function LoginForm(props) {
 				</button>
 			</form>
 			<div>
-				Don't have an account yet? Sign up <Link to="/signup">here!</Link>
+				Don't have an account yet? Sign up <a href="/signup">here</a>!
 			</div>
 		</React.Fragment>
 	);
